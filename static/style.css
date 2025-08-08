@@ -1,36 +1,27 @@
+:root {
+  --sidebar-w: clamp(180px, 20vw, 320px);
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  height: 100vh;
 }
 
 #sidebar {
-    width: 200px;
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    position: fixed;
-    height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  overflow: auto;
 }
 
-#sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-#sidebar ul li {
-    margin: 10px 0;
-}
-
-#sidebar ul li a {
-    color: white;
-    text-decoration: none;
-}
+#sidebar ul { list-style: none; padding: 0; }
+#sidebar ul li { margin: 10px 0; }
+#sidebar ul li a { color: white; text-decoration: none; }
 
 .content {
-    margin-left: 220px;
-    padding: 20px;
-    flex-grow: 1;
+  padding: 20px;
+  overflow: auto;
 }
